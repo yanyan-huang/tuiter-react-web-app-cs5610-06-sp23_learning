@@ -18,10 +18,11 @@ function TuitList() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(findAllTuitsThunk());
-  }, []);
+    }, []);
   const [newTuit, setNewTuit] = useState({
     text: "New Tuit",
   });
+
   return (
     <div>
       <h1>Tuit List</h1>

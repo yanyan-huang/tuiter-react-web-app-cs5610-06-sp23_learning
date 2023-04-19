@@ -6,14 +6,17 @@ export const findAllTuits = async () => {
   return response.data;
 };
 
-export const findAllTuits2 = () => {
-  return axios.get(TUITER_API_URL).then((response) => response.data);
+export const findAllTuits2 = () => { // old syntax, same as above
+  return axios.get(TUITER_API_URL)
+    .then((response) => response.data);
 };
 
 export const findTuitById = (id) => {};
+
 export const createTuit = (tuit) => {
   return axios.post(TUITER_API_URL, tuit);
 };
+
 export const updateTuit = (newTuit) => {
   return axios.put(`${TUITER_API_URL}/${newTuit.id}`, newTuit);
 };
